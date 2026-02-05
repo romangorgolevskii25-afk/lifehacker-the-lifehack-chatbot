@@ -23,6 +23,8 @@ def catbot_response(user_input):
         return "🐱 Clean for just 10 minutes. Small wins = big purrs 😸"
     elif "hi" or "hello" in user_input:
         return "Hello! welcome to the lifehacker bot!"
+    elif "meow" and "pur" in user_input:
+        return "Meow meow purrrrrrrr"
     else:
         return "🐱 Interesting! My lifehack: break big problems into tiny cat-sized steps."
 
