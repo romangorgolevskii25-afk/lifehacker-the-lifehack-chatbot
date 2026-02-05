@@ -6,8 +6,7 @@ st.set_page_config(
     page_icon="🐱"
 )
 
-st.title("🐱 Lifehacker Chat
-bot")
+st.title("🐱 Lifehacker Chatbot")
 st.write("Ask me for a lifehack and I’ll help you out!")
 
 # Simple lifehack responses
