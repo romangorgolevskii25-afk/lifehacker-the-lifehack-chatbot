@@ -1,4 +1,3 @@
-
 import streamlit as st
 import random
 
@@ -63,4 +62,26 @@ if "messages" not in st.session_state:
 # -------------------------
 # Display chat history
 # -------------------------
-for message in s:
+for message in st.session_state.messages:
+    with st.chat_message(message["role"]):
+        st.markdown(message["content"])
+
+# -------------------------
+# Chat input
+# -------------------------
+if prompt := st.chat_input("Ask me for a life hack..."):
+
+    # Save user message
+    st.session_state.messages.append({"role": "user", "content": prompt})
+
+    with st.chat_message("user"):
+        st.markdown(prompt)
+
+    # Generate response
+    response = get_lifehack(prompt)
+
+    # Save bot response
+    st.session_state.messages.append({"role": "assistant", "content": f"💡 {response}"})
+
+    with st.chat_message("assistant"):
+        st.markdown(f"💡 {response}")
