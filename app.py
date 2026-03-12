@@ -63,4 +63,4 @@ if "messages" not in st.session_state:
 # -------------------------
 # Display chat history
 # -------------------------
-for message in s
+for message in s:
